@@ -32,7 +32,10 @@ This repository documents the full development process, including CAD models, el
 | Power Supply          | 5V 2A USB Adapter (later: solar panel)       |
 | 3D Printer            | Bambu Lab P1P |
 
----
+
+📁 The full CAD source is available in a single FreeCAD file:  
+[`TelescopProject.FCStd`](cad/TelescopProject.FCStd)  
+Each version (v1, v2, failed prototypes) is modeled as a separate Body for clarity and iteration tracking.
 
 ## 🛠️ Current Status
 
@@ -51,7 +54,27 @@ This repository documents the full development process, including CAD models, el
 🗂️ Detailed iteration logs and photos are available in  
 👉 [prototype-log.md](prototype-log.md)
 
----
 
-## 📂 Repository Structure
+## 📂 Repository Structure (Simplified)
+
+- `cad/` → FreeCAD source file and printed STL files  
+- `photos/` → Images of prototypes, failed prints, and final assemblies  
+- `arduino/` → Microcontroller firmware for stepper drivers  
+- `ros/` → ROS nodes for telescope control logic  
+- `prototype-log.md` → Iteration notes, measurements, and learning from each step
+
+
+## 📐 CAD Files
+
+- All mechanical parts are designed in a single FreeCAD file:  
+  [`TelescopProject.FCStd`](cad/TelescopProject.FCStd)
+  
+- Each prototype or revision is stored as a separate **Body** within the file:
+  - `RA_half_pipe_v2`, `DEC_half_pipe_current`, `NEMA_L_bracket_narrow`, etc.
+
+- Bodies that are no longer in use are marked with the suffix `_discarded`.  
+  These represent either failed prints or designs that were intentionally replaced with better alternatives.
+
+- STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part.
+- Discarded or outdated versions (which may have been printed previously) are **not included here**, but still exist as separate bodies in the FreeCAD source file
 
