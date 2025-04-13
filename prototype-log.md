@@ -43,7 +43,13 @@ This document records all 3D printed prototypes, their testing results, and lear
 
 ## 📅 April 12, 2025 — RA Half Pipe V2 (Screw Alignment Issue)
 
-- **Goal**: Redesign the RA half-pipe with a longer arc and improved screw hole alignment for M5 bolts.
+- **Goal**: Redesign the RA half-pipe with a longer arc and improved screw hole alignment for M8 bolts.
 - **Result**: The arc length was sufficient, but the screw hole geometry still didn't align properly with the mount holes. The piece couldn’t be mounted without excessive force.
 - **Learning**: In the next version, precise measurement around the telescope collar and bolt spacing is required. Hole offset needs to be based on actual curvature path, not just diameter.
 - 📸 `photos/RA-half-pipe-v2-failed-to-fit screw-2025-04-12 at 20.13.03.jpeg`
+
+## 📅 April 13, 2025 — RA Half-Pipe Adjustment Planning
+- Slight increase in arc length (~3–5°) is required for better alignment of the motor arm.
+- The M8 bolt hole needs a flared or curved entry for easier fitment, and slight sanding might be needed where the bracket meets the telescope.
+- 📸 `photos/RA-half-pipe-adjustments-requıired-pipe-length.jpeg`, 
+- 📸 `photos/RA-half-pipe-adjustments-requıired-screw.jpeg`
