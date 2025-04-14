@@ -53,3 +53,10 @@ This document records all 3D printed prototypes, their testing results, and lear
 - The M8 bolt hole needs a flared or curved entry for easier fitment, and slight sanding might be needed where the bracket meets the telescope.
 - 📸 `photos/RA-half-pipe-adjustments-requıired-pipe-length.jpeg`, 
 - 📸 `photos/RA-half-pipe-adjustments-requıired-screw.jpeg`
+
+## 📅 April 14, 2025 — RA Half Pipe Stable Version
+- **Goal**: Produce a structurally stable RA half-pipe mount to carry the stepper motor.
+- **Result**: The latest printed version successfully holds the motor with sufficient stability. Minor alignment refinements may still be required.
+- 📸 `photos/14-04-2025-RA-half-pipe-stable_1.jpeg`,
+- 📸 `photos/14-04-2025-RA-half-pipe-stable_2.jpeg`
+
