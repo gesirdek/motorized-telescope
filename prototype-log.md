@@ -41,22 +41,44 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 `photos/DEC-mount-success-up.jpeg`
 - 📸 `photos/DEC-coupling-motor-success.jpeg`
 
-## 📅 April 12, 2025 — RA Half Pipe V2 (Screw Alignment Issue)
+## 📅 April — RA Half Pipe V2 (Screw Alignment Issue)
 
 - **Goal**: Redesign the RA half-pipe with a longer arc and improved screw hole alignment for M8 bolts.
 - **Result**: The arc length was sufficient, but the screw hole geometry still didn't align properly with the mount holes. The piece couldn’t be mounted without excessive force.
 - **Learning**: In the next version, precise measurement around the telescope collar and bolt spacing is required. Hole offset needs to be based on actual curvature path, not just diameter.
 - 📸 `photos/RA-half-pipe-v2-failed-to-fit screw-2025-04-12 at 20.13.03.jpeg`
 
-## 📅 April 13, 2025 — RA Half-Pipe Adjustment Planning
+## 📅 April — RA Half-Pipe Adjustment Planning
 - Slight increase in arc length (~3–5°) is required for better alignment of the motor arm.
 - The M8 bolt hole needs a flared or curved entry for easier fitment, and slight sanding might be needed where the bracket meets the telescope.
 - 📸 `photos/RA-half-pipe-adjustments-requıired-pipe-length.jpeg`, 
 - 📸 `photos/RA-half-pipe-adjustments-requıired-screw.jpeg`
 
-## 📅 April 14, 2025 — RA Half Pipe Stable Version
+## 📅 April — RA Half Pipe Stable Version
 - **Goal**: Produce a structurally stable RA half-pipe mount to carry the stepper motor.
 - **Result**: The latest printed version successfully holds the motor with sufficient stability. Minor alignment refinements may still be required.
 - 📸 `photos/14-04-2025-RA-half-pipe-stable_1.jpeg`,
 - 📸 `photos/14-04-2025-RA-half-pipe-stable_2.jpeg`
 
+## 📅 April — Updated L-Grabbers and Half-Pipe Mounts Installed
+- **Goal**: Update L-grabbers and produce/install new half-pipe mounts for both RA and DEC motor setups.
+- **Result**:Updated L-grabbers were successfully installed with revised half-pipe designs. Mounting alignment achieved with solid mechanical fit.
+- 📸 `photos/L-Grabber-mounted-1.jpeg`,
+- 📸 `photos/L-Grabber-mounted-2.jpeg`,
+- 📸 `photos/L-Grabber-mounted-3.jpeg`
+
+## 📅 April — First Motor Spin with D1 Mini
+- **Goal**:  Verify stepper motor movement using D1 Mini and initial breadboarded electronics.
+- **Result**: Successfully controlled one stepper motor via D1 Mini using STEP/DIR pins. Stable rotation achieved.
+- 📸 `photos/Stepper-Motor-1.jpeg`,
+- 📸 `photos/Stepper-Motor-E.jpeg`,
+- 📸 `photos/Elect-Stepper-Motor.png`
+
+## 📅 April 24, 2025 — Electronics Enclosure Design Started
+- **Goal**: Begin designing a housing/enclosure for the electronics, including the D1 Mini and driver boards.
+- **Result**:  Initial sketches and measurements completed. Enclosure will accommodate future upgrades. Next goal: drive two motors via a single D1 Mini.
+- 📸 `photos/Elect-Box-1.png`
+- 📸 `photos/Elect-Box-2.png`
+
+
+🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.
