@@ -78,3 +78,22 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 - STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part.
 - Discarded or outdated versions (which may have been printed previously) are **not included here**, but still exist as separate bodies in the FreeCAD source file
 
+## 🧩 PCB Files
+
+Initial Gerber files for the motor control board are provided under `/pcb/gerber-files/`.
+
+These are **v1 design files** and **have not yet been sent for PCB manufacturing**.  
+Future versions may include design improvements based on testing results.
+
+## ⚡ Power Supply Setup
+
+The power supply consists of a ready-made 12V 5A unit mounted inside a protective enclosure.  
+An inline 3A fuse is installed on the AC input for safety, and a DC power distributor with integrated fuses is used to organize the 12V outputs.
+
+No custom PCB is created for the power supply; connections are made manually using standard wiring.
+
+## ⚠️ Disclaimer
+
+This project involves work with high voltages (230V AC) and is provided as-is without any warranty.  
+Use at your own risk. Ensure you have proper knowledge and take appropriate safety measures when replicating or modifying this system.
+
