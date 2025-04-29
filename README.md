@@ -41,7 +41,7 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 
 - [x] Repository initialized and documented
 - [x] CAD measurements started, prototype V1 tested
-- [ ] Final RA motor mount design in progress
+- [x] Final RA motor mount design in progress
 - [ ] DEC mount modeling
 - [ ] Focuser gear mechanism prototyping
 - [ ] ROS communication layer setup
@@ -59,6 +59,7 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 
 - `cad/` → FreeCAD source file and printed STL files  
 - `photos/` → Images of prototypes, failed prints, and final assemblies  
+- `/pcb/` → Gerber files and PCB resources for the motor control board
 - `arduino/` → Microcontroller firmware for stepper drivers  
 - `ros/` → ROS nodes for telescope control logic  
 - `prototype-log.md` → Iteration notes, measurements, and learning from each step
