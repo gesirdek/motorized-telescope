@@ -1,2 +1,5 @@
+# Ignore secrets file
 secrets.h
-/build/
+
+# Ignore build directory inside Arduino project
+/arduino/telescope_control/build/
