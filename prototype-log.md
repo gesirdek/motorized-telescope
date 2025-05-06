@@ -80,5 +80,10 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 `photos/Elect-Box-1.png`
 - 📸 `photos/Elect-Box-2.png`
 
+## 📅 May 6, 2025 — Power Supply Enclosure Design in Progress
+- **Goal**: Create a stable and compact enclosure to house the power supply and related wiring.
+- **Result**:  Preliminary design completed in FreeCAD. Dimensions adjusted to fit under telescope tripod. Ventilation and cable routing considered.
+- 📸 `photos/PETG-power-supply-fail.png`
+- 📸 `photos/PETG-power-supply-fail-2.png`
 
 🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.
