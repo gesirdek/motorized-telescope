@@ -57,9 +57,9 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 
 ## 📂 Repository Structure (Simplified)
 
-- `cad/` → FreeCAD source file and printed STL files  
+- `cad/` → FreeCAD source file and STL files for 3D printing, and Bambu Studio `.3mf` project files
 - `photos/` → Images of prototypes, failed prints, and final assemblies  
-- `/pcb/` → Gerber files and PCB resources for the motor control board
+- `pcb/` → Gerber files and PCB resources for the motor control board
 - `arduino/` → Microcontroller firmware for stepper drivers  
 - `ros/` → ROS nodes for telescope control logic  
 - `prototype-log.md` → Iteration notes, measurements, and learning from each step
@@ -78,6 +78,18 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 
 - STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part.
 - Discarded or outdated versions (which may have been printed previously) are **not included here**, but still exist as separate bodies in the FreeCAD source file
+
+## 🎛️ Bambu Studio Project Files
+
+The `bambu-studio/` folder contains `.3mf` project files created with Bambu Studio. These files include both the 3D model(s) and all relevant print settings (such as layer height, speed, support configuration, and filament type) used for slicing.
+
+Unlike some other slicers, Bambu Studio does not store print settings as separate configuration files — all settings are embedded within the `.3mf` file itself.
+
+### Notes
+- File names may indicate specific profiles (e.g., "high-quality", "draft", or nozzle size), but the actual configuration is always included in the `.3mf` file.
+- If you're using a different slicer or printer, refer to the `.stl` files in the `stl/` folder and manually adjust your settings based on the intended configuration.
+- Optional: some setting screenshots may also be included for reference.
+
 
 ## 🧩 PCB Files
 
