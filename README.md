@@ -76,7 +76,8 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 - Bodies that are no longer in use are marked with the suffix `_discarded`.  
   These represent either failed prints or designs that were intentionally replaced with better alternatives.
 
-- STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part.
+- STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part. 
+- STL files in `/cad/stl/` follow the **same folder structure** as the FreeCAD source files.
 - Discarded or outdated versions (which may have been printed previously) are **not included here**, but still exist as separate bodies in the FreeCAD source file
 
 <details>
@@ -85,15 +86,23 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 ```
 /cad/
 ├── telescope_body_parts/
-│ ├── RA_half_pipe_v3.FCStd
-│ └── DEC_half_pipe_current.FCStd
+│ ├── DEC-Half-Pipe.FCStd
+│ └── RA-Half-Pipe.FCStd
 ├── power-box-parts/
-│ ├── Box_main.FCStd
-│ └── Cover_plate.FCStd
+│ ├── Pin.FCStd
+│ ├── Power-Box-Back.FCStd
+│ ├── Power-Box-Base.FCStd
+│ ├── Power-Box-Front.FCStd
+│ ├── Power-Box-Left-Side.FCStd
+│ ├── Power-Box-Right-Side.FCStd
+│ └── Power-Box-Top.FCStd
 ├── shared_parts/
-│ └── NEMA_L_bracket_narrow.FCStd
+│ ├──  L-Grabber.FCStd
+│ └── TripodGrabber.FCStd
 ├── stl/
-│ └── *.stl
+│ ├── telescope_body_parts/
+│ ├── power-box-parts/
+│ └── shared_parts/
 └── TelescopeProject.FCStd
 ```
 </details>
