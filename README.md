@@ -67,17 +67,36 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 
 ## 📐 CAD Files
 
-- All mechanical parts are designed in a single FreeCAD file:  
-  [`TelescopProject.FCStd`](cad/TelescopProject.FCStd)
-  
-- Each prototype or revision is stored as a separate **Body** within the file:
-  - `RA_half_pipe_v2`, `DEC_half_pipe_current`, `NEMA_L_bracket_narrow`, etc.
+- All mechanical parts are designed in individual FreeCAD files.
+
+- Each functional group (e.g. RA/DEC parts, power box) lives in its own folder under `/cad/`.
+
+- Discarded or outdated parts are moved to a central file: [`TelescopeProject.FCStd`](cad/TelescopeProject.FCStd)
 
 - Bodies that are no longer in use are marked with the suffix `_discarded`.  
   These represent either failed prints or designs that were intentionally replaced with better alternatives.
 
 - STL files in `/cad/stl/` are **cleaned and curated**: they represent only the **most up-to-date and usable** versions of each part.
 - Discarded or outdated versions (which may have been printed previously) are **not included here**, but still exist as separate bodies in the FreeCAD source file
+
+<details>
+<summary>📁 CAD Folder Structure (click to expand)</summary>
+
+```
+/cad/
+├── telescope_body_parts/
+│ ├── RA_half_pipe_v3.FCStd
+│ └── DEC_half_pipe_current.FCStd
+├── power-box-parts/
+│ ├── Box_main.FCStd
+│ └── Cover_plate.FCStd
+├── shared_parts/
+│ └── NEMA_L_bracket_narrow.FCStd
+├── stl/
+│ └── *.stl
+└── TelescopeProject.FCStd
+```
+</details>
 
 ## 🎛️ Bambu Studio Project Files
 

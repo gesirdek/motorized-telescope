@@ -86,4 +86,16 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 `photos/PETG-power-supply-fail.png`
 - 📸 `photos/PETG-power-supply-fail-2.png`
 
+## 📅 May 8, 2025 — Power Box Assembly Test (Right, Rear, Base)
+- **Goal**: Print and test-fit the right, rear, and base parts of the power supply box.
+- **Result**: Parts interlocked successfully. Some minor issues occurred.
+- 📝 Forgot to include one of the holes on the rear panel — drilled manually.
+- 📝 The lower interlock on the right side was printed with support; removal left a rough surface.
+- 📝 Didn't sand the surface; assembly required some force but was possible.
+- 📝 Fit was not smooth; alternative support strategy needed for future prints.
+- 📸 `photos/power-box-fit-test-2025-05-08.png`
+- 📸 `photos/power-box-back.jpeg`
+- 📸 `photos/power-box-base-back-right.jpeg`
+- 📸 `photos/power-box-right-panel.jpeg`
+
 🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.

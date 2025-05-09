@@ -3,3 +3,5 @@ secrets.h
 
 # Ignore build directory inside Arduino project
 /arduino/telescope_control/build/
+
+*.FCBak
