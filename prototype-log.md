@@ -99,3 +99,4 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 `photos/power-box-right-panel.jpeg`
 
 🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.
+🧪 Decided: Use phosphorescent tape for night-time visibility and minor edge sealing; apply transparent silicone inside cable entry points for proper isolation.
