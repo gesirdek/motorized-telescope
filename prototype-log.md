@@ -98,5 +98,18 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 `photos/power-box-base-back-right.jpeg`
 - 📸 `photos/power-box-right-panel.jpeg`
 
+## 📅 May 14, 2025 — Power Box Final Assembly and Verification
+- **Goal**: Complete assembly of the power supply box and perform final verification.
+- **Result**: Assembly completed successfully. Output stable under load.
+- 📝 All panels fully assembled and interlocked.
+- 📝 Fluorescent tape applied to edges for visibility in low light.
+- 📝 Hot glue used to secure internal components.
+- 📝 Output voltage and current tested — stable operation confirmed.
+- 📝 No overheating or noise detected during test.
+- 📸 photos/power-box-assembled.jpeg
+- 📸 photos/power-box-assembled-2.jpeg
+- 📸 photos/power-box-internal-hotglue.jpeg
+- 📸 photos/power-box-fluorescent-edges.jpeg
+
 🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.
 🧪 Decided: Use phosphorescent tape for night-time visibility and minor edge sealing; apply transparent silicone inside cable entry points for proper isolation.
