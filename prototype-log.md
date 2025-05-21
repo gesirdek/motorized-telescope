@@ -111,5 +111,18 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📸 photos/power-box-internal-hotglue.jpeg
 - 📸 photos/power-box-fluorescent-edges.jpeg
 
-🛠️ Planned: Write protocol layer for structured communication with D1 Mini, enabling Wi-Fi command interface for remote control.
-🧪 Decided: Use phosphorescent tape for night-time visibility and minor edge sealing; apply transparent silicone inside cable entry points for proper isolation.
+## 📅 May 21, 2025 — RA/DEC Motor Box Assembly and Test
+- **Goal**: Assemble the RA/DEC control box, wire the electronics, and verify functionality via MQTT.
+- **Result**: System operational; motors respond correctly to MQTT commands.
+- 📝 RA/DEC box assembled and electronics placed inside.
+- 📝 All internal wiring completed; connections verified.
+- 📝 One faulty Dupont cable was replaced.
+- 📝 Box closed and system tested.
+- 📝 After powering D1 Mini and sending MQTT command via Mosquitto, both RA and DEC motors moved as expected.
+- 📝 Noticed that motor power must be connected after D1 Mini is powered on — this behavior needs investigation.
+- 📝 Planned task completed: Structured Wi-Fi command interface implemented using MQTT; remote control now functional.
+- 📽️ [Watch test video on YouTube](https://youtube.com/shorts/sel-l1Y8c-Y)
+
+🛠️ Planned: 
+- Gerber file needs to be updated to reflect latest wiring and component layout.
+- Focuser motor integration.

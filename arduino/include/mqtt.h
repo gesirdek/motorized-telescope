@@ -6,6 +6,8 @@
 #include "motion.h"
 #include "secrets.h"
 
+#define FAN_PIN D2
+
 // External declarations
 extern Motor raMotor;
 extern Motor decMotor;
@@ -45,12 +47,17 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
       return;
     }
 
-    raMotor.setMovement(doc.containsKey("ra") ? doc["ra"]: 0);
-    decMotor.setMovement(doc.containsKey("dec") ? doc["dec"]: 0);
+    float ra = doc.containsKey("ra") && doc["ra"].is<float>() ? doc["ra"].as<float>() : 0.0;
+    float dec = doc.containsKey("dec") && doc["dec"].is<float>() ? doc["dec"].as<float>() : 0.0;
+
+    raMotor.setMovement(ra);
+    decMotor.setMovement(dec);
 
     isBusy = true;
     isStopped = false;
+    digitalWrite(FAN_PIN, HIGH); // Fan start
     moveMotorMM();
+    digitalWrite(FAN_PIN, LOW);  // Fan stop
     isBusy = false;
 
     if (!isStopped) client.publish("teleskop/status", "ready");
