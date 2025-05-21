@@ -123,6 +123,17 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📝 Planned task completed: Structured Wi-Fi command interface implemented using MQTT; remote control now functional.
 - 📽️ [Watch test video on YouTube](https://youtube.com/shorts/sel-l1Y8c-Y)
 
+## 📅 May 21, 2025 — Motor Power Sequencing Issue: Solution Identified
+- **Goal**: Investigate why motors must be powered only after D1 Mini boot.
+- **Result**: Root cause identified; hardware solution planned but not yet implemented.
+- 📝 Observed issue: system only works if motor power is connected after D1 Mini is booted.
+- 📝 Suspected power sequencing conflict between D1 Mini and motor drivers.
+- 📝 Proposed solution: add IRLZ44N N-channel MOSFET to control motor GND via GPIO.
+- 📝 D1 Mini would enable motor power after it completes boot sequence.
+- 📝 330Ω resistor and optional 10kΩ pull-down recommended for stable gate control.
+- 📝 Implementation pending — to be tested in upcoming iteration.
+- 📝 Gerber files will need to be updated if solution is verified.
+
 🛠️ Planned: 
 - Gerber file needs to be updated to reflect latest wiring and component layout.
 - Focuser motor integration.
