@@ -134,6 +134,23 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📝 Implementation pending — to be tested in upcoming iteration.
 - 📝 Gerber files will need to be updated if solution is verified.
 
+## 📅 June 08, 2025 — Crayford Focuser Design Initiated
+- **Goal**: Begin designing a Crayford-style focuser with stepper motor integration.
+- **Result**: Initial design concepts completed; parts adapted to motor and shaft geometry.
+- 📝 Started working on focuser motor design; aiming to build a Crayford focuser.
+- 📝 Creating a design that allows mounting a 28BYJ-48 stepper motor.
+- 📝 Planning to reuse a shaft from an old toy car wheel as the drive axle.
+- 📝 Updated current designs to accommodate the reused shaft.
+
+## 📅 June 20, 2025 — Crayford Focuser Mechanism Assembled and Tested
+- **Goal**: Complete physical assembly of the Crayford focuser and verify mechanical operation.
+- **Result**: Assembly completed successfully; mechanical movement confirmed; initial driver circuit test passed.
+- 📝 Crayford focuser mechanism fully assembled and manually tested.
+- 📝 Basic physical operation appears normal; no major resistance or misalignment observed.
+- 📝 This test only covered manual operation, motor-driven behavior on the focuser itself still untested.
+- 📝 Switched to a metal coupling for the drive axle, which improved mechanical consistency and alignment.
+- 📝 Stepper motor and driver circuit tested separately — motor responds correctly.
+
 🛠️ Planned: 
 - Gerber file needs to be updated to reflect latest wiring and component layout.
 - Focuser motor integration.
