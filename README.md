@@ -139,7 +139,7 @@ Future versions may include design improvements based on testing results.
 ## ⚡ Power Supply Setup
 
 The power supply consists of a ready-made 12V 5A unit mounted inside a protective enclosure.  
-An inline 3A fuse is installed on the AC input for safety, and a DC power distributor with integrated fuses is used to organize the 12V outputs.
+An inline T1A fuse (slow-blow) is installed on the AC input for safety, and a DC power distributor with integrated fuses is used to organize the 12V outputs.
 
 No custom PCB is created for the power supply; connections are made manually using standard wiring.
 
