@@ -9,14 +9,15 @@ This repository documents the full development process, including CAD models, el
 
 ## 🚀 Project Goals
 
-- ✅ Motorize **RA**, **DEC**, and **Focuser** axes using NEMA 17 planetary gear stepper motors.
+- ✅ Motorize **RA**, **DEC** axes using NEMA 17 planetary gear stepper motors.
+- ✅ Motorize **Focuser** using 28BYJ-48 stepper motor.
 - ✅ Design all mechanical parts in **FreeCAD** and prototype them with a **3D printer**.
-- ✅ Control the motors via **stepper drivers (A4988 → TMC2209)** and a **microcontroller (Arduino → D1 Mini)**.
+- ✅ Control the motors via **stepper drivers (A4988 → TMC2209, ULN 2003)** and a **microcontroller (Arduino → D1 Mini)**.
 - ✅ Use **ROS** for high-level control and coordination.
 - ✅ Implement **GoTo & Tracking** based on celestial coordinates.
-- ✅ Support solar-powered operation for outdoor autonomy.
 - ✅ Document all failed and revised prototypes to reduce material waste and improve design efficiency.
 - 🕒 Future plan: switch to **Raspberry Pi** for portable, self-contained operation.
+- 🕒 Future plan - Support solar-powered operation for outdoor autonomy.
 
 ---
 
@@ -29,21 +30,17 @@ This repository documents the full development process, including CAD models, el
 | Motor Drivers         | NEMA 17 - A4988 (initial) → TMC2209 (planned), 28BYJ-48 - ULN 2003            |
 | Microcontroller       | D1 Mini (ESP8266)                                 |
 | Host Controller       | Via Ubuntu, (Raspberry Pi 3 Model B+ future)      |
-| Power Supply          | 5V 2A USB Adapter (later: solar panel)            |
+| Power Supply          | 12V 5A USB Adapter (later: solar panel)            |
 | 3D Printer            | Bambu Lab P1P |
 
-
-📁 The full CAD source is available in a single FreeCAD file:  
-[`TelescopProject.FCStd`](cad/TelescopProject.FCStd)  
-Each version (v1, v2, failed prototypes) is modeled as a separate Body for clarity and iteration tracking.
 
 ## 🛠️ Current Status
 
 - [x] Repository initialized and documented
 - [x] CAD measurements started, prototype V1 tested
 - [x] Final RA motor mount design in progress
-- [ ] DEC mount modeling
-- [ ] Focuser gear mechanism prototyping
+- [x] DEC mount modeling
+- [x] Focuser gear mechanism prototyping
 - [ ] ROS communication layer setup
 - [ ] Integrated system test
 
@@ -96,12 +93,25 @@ Each version (v1, v2, failed prototypes) is modeled as a separate Body for clari
 │ ├── Power-Box-Left-Side.FCStd
 │ ├── Power-Box-Right-Side.FCStd
 │ └── Power-Box-Top.FCStd
+├── ec-box-parts/
+│ ├── EC-base.FCStd
+│ ├── EC-Box-Assembly.FCStd
+│ ├── EC-Box-Side-L.FCStd
+│ ├── EC-Box-Side-R.FCStd
+│ └── EC-Box-Top.FCStd
 ├── shared_parts/
 │ ├──  L-Grabber.FCStd
 │ └── TripodGrabber.FCStd
+├── crayford_focuser/
+│ ├── bearings-base.FCStd
+│ ├── crayford-focuser-presser.FCStd
+│ ├── crayford-holder.FCStd
+│ └── crayford-tube.FCStd
 ├── stl/
 │ ├── telescope_body_parts/
 │ ├── power-box-parts/
+│ ├── ec-box-parts/
+│ ├── crayford_focuser/
 │ └── shared_parts/
 └── TelescopeProject.FCStd
 ```
