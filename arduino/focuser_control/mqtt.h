@@ -2,14 +2,12 @@
 
 #include <ArduinoJson.h>
 #include "Motor.h"
-#include "motion.h"
 #include "mqtt_base.h"
 
-#define FAN_PIN D2
+#define FAN_PIN D0  // GPIO16 (D0)
 
 // External declarations
-extern Motor raMotor;
-extern Motor decMotor;
+extern Motor fMotor;
 
 extern bool isBusy;
 extern bool isStopped;
@@ -20,12 +18,12 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
   DeserializationError error = deserializeJson(doc, payload, length);
 
   if (error) {
-    client.publish("teleskop/status", "json parse error");
+    client.publish("focuser/status", "json parse error");
     return;
   }
 
   if (!doc.containsKey("command")) {
-    client.publish("teleskop/status", "missing command");
+    client.publish("focuser/status", "missing command");
     return;
   }
 
@@ -33,34 +31,37 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
 
   if (cmd == "stop" && isBusy) {
     isStopped = true;
-    client.publish("teleskop/status", "stopped");
+    client.publish("focuser/status", "stopped");
     return;
   }
 
   if (cmd == "move") {
     if (isBusy) {
-      client.publish("teleskop/status", "rejected: busy");
+      client.publish("focuser/status", "rejected: busy");
       return;
     }
 
-    float ra = doc.containsKey("ra") && doc["ra"].is<float>() ? doc["ra"].as<float>() : 0.0;
-    float dec = doc.containsKey("dec") && doc["dec"].is<float>() ? doc["dec"].as<float>() : 0.0;
-
-    raMotor.setMovement(ra);
-    decMotor.setMovement(dec);
+    float movement = doc.containsKey("mv") && doc["mv"].is<float>() ? doc["mv"].as<float>() : 0.0;
 
     isBusy = true;
     isStopped = false;
     digitalWrite(FAN_PIN, HIGH); // Fan start
-    moveMotorMM();
+    
+    if (movement > 0) {
+      fMotor.stepForward(movement);
+    } else {
+      fMotor.stepBackward(-movement);
+    }
+
+
     digitalWrite(FAN_PIN, LOW);  // Fan stop
     isBusy = false;
 
-    if (!isStopped) client.publish("teleskop/status", "ready");
+    if (!isStopped) client.publish("focuser/status", "ready");
     return;
   }
 
-  client.publish("teleskop/status", "unknown command");
+  client.publish("focuser/status", "unknown command");
 }
 
 

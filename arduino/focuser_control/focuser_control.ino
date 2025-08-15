@@ -3,16 +3,14 @@
 #include <PubSubClient.h>
 
 #include "secrets.h"   // WiFi & MQTT credentials
-#include "Motor.h"     // Motor class
+#include "Motor.h" // Motor class
 #include "mqtt.h"      // MQTT logic
-#include "motion.h"    // Motor movement logic
 
 // Global hardware and state instances
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-Motor raMotor(0, 2, 16, 50000.0);   // RA axis motor (D4, D5)
-Motor decMotor(13, 12, 15, 40000.0); // DEC axis motor (D6, D7)
+Motor fMotor(14, 12, 13, 15);
 
 bool isBusy = false;
 bool isStopped = false;
@@ -29,26 +27,22 @@ void setup() {
   }
 
   // Enable OTA
-  ArduinoOTA.setHostname(OTA_HOST);
-  ArduinoOTA.setPassword(OTA_PASS);
+  ArduinoOTA.setHostname(OTA_FOCUSER_HOST);
+  ArduinoOTA.setPassword(OTA_FOCUSER_PASS);
   ArduinoOTA.begin();
 
   // Setup MQTT
   client.setServer(MQTT_HOST, 1883);
   client.setCallback(mqttCallback);
 
-  reconnectMQTT("TelescopeClient", "teleskop/komut"); // Subscribe to topics
-
-  // Disable motors
-  raMotor.setEnable(false);
-  decMotor.setEnable(false);
+  reconnectMQTT("FocuserClient", "focuser/komut"); // Subscribe to topics
 }
 
 void loop() {
   ArduinoOTA.handle();
 
   if (!client.connected()) {
-    reconnectMQTT("TelescopeClient", "teleskop/komut");
+    reconnectMQTT("FocuserClient", "focuser/komut");
   }
 
   client.loop();
