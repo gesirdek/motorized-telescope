@@ -151,6 +151,21 @@ This document records all 3D printed prototypes, their testing results, and lear
 - 📝 Switched to a metal coupling for the drive axle, which improved mechanical consistency and alignment.
 - 📝 Stepper motor and driver circuit tested separately — motor responds correctly.
 
+## 📅 August 20, 2025 — Crayford Focuser Motor Test & MQTT Communication
+
+**Goal**: Move the Crayford focuser with a motor and verify MQTT communication.
+**Result**: The initial motor test failed; the motor could not turn the focuser due to insufficient clearance. Adding a spring solved the clearance issue, and the motor was able to move the focuser successfully.
+**MQTT Test**: Communication tests with an MQTT broker on Ubuntu were successful. Commands were transmitted correctly and the system responded as expected.
+**Learning**: For efficient motor operation in the Crayford focuser mechanism, spring-based clearance adjustment is critical. Remote control via MQTT works reliably.
+
+## 📅 August 25, 2025 — MQTT Broker Migration to Raspberry Pi & System Test
+
+**Goal**: Migrate the MQTT broker from Ubuntu to Raspberry Pi 3B+ and repeat the focuser motor test.
+**Setup**: Used a Raspberry Pi 3B+ (32-bit OS for better performance and compatibility with camera and MQTT). The system boots from a USB stick to utilize available resources.
+**Result**: The MQTT broker runs smoothly on the Raspberry Pi, and the focuser motor test was successful. Performance is currently satisfactory.
+**Next Steps**: Plan to add a camera and retest. Depending on camera performance, may upgrade hardware or keep the current setup.
+**Learning**: Migrating the broker to Raspberry Pi is practical and efficient for this project. USB boot and 32-bit OS provide enough performance for MQTT and camera tasks with available hardware.
+
+
 🛠️ Planned: 
 - Gerber file needs to be updated to reflect latest wiring and component layout.
-- Focuser motor integration.

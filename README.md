@@ -16,7 +16,7 @@ This repository documents the full development process, including CAD models, el
 - ✅ Use **ROS** for high-level control and coordination.
 - ✅ Implement **GoTo & Tracking** based on celestial coordinates.
 - ✅ Document all failed and revised prototypes to reduce material waste and improve design efficiency.
-- 🕒 Future plan: switch to **Raspberry Pi** for portable, self-contained operation.
+- ✅ Switched to **Raspberry Pi** for portable, self-contained operation.
 - 🕒 Future plan - Support solar-powered operation for outdoor autonomy.
 
 ---
@@ -29,7 +29,7 @@ This repository documents the full development process, including CAD models, el
 | Motors                | NEMA 17 with Planetary Gear, 28BYJ-48 Step Motor  |
 | Motor Drivers         | NEMA 17 - A4988 (initial) → TMC2209 (planned), 28BYJ-48 - ULN 2003            |
 | Microcontroller       | D1 Mini (ESP8266)                                 |
-| Host Controller       | Via Ubuntu, (Raspberry Pi 3 Model B+ future)      |
+| Host Controller       | Raspberry Pi 3 Model B+      |
 | Power Supply          | 12V 5A USB Adapter (later: solar panel)            |
 | 3D Printer            | Bambu Lab P1P |
 
