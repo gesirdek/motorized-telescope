@@ -32,7 +32,7 @@ void Motor::stepForward(int steps) {
   for (int i = 0; i < steps; ++i) {
     _stepIndex = (_stepIndex + 1) % 8;
     step(_stepIndex);
-    delay(5);
+    delay(2);
   }
 }
 
@@ -40,7 +40,7 @@ void Motor::stepBackward(int steps) {
   for (int i = 0; i < steps; ++i) {
     _stepIndex = (_stepIndex + 7) % 8; // -1 % 8 = 7
     step(_stepIndex);
-    delay(5);
+    delay(2);
   }
 }
 
