@@ -28,8 +28,8 @@ This repository documents the full development process, including CAD models, el
 | Telescope             | Bresser AR102/1000, Equatorial Mount              |
 | Motors                | NEMA 17 with Planetary Gear, 28BYJ-48 Step Motor  |
 | Motor Drivers         | NEMA 17 - A4988 (initial) → TMC2209 (planned), 28BYJ-48 - ULN 2003            |
-| Microcontroller       | D1 Mini (ESP8266)                                 |
-| Host Controller       | Raspberry Pi 3 Model B+      |
+| Microcontroller       | D1 Mini (ESP8266)                                  |
+| Host Controller       | Raspberry Pi 5 Model                               |
 | Power Supply          | 12V 5A USB Adapter (later: solar panel)            |
 | 3D Printer            | Bambu Lab P1P |
 
