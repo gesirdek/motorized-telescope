@@ -21,6 +21,10 @@ void setup() {
   Serial.begin(115200);
   pinMode(FAN_PIN, OUTPUT);
   digitalWrite(FAN_PIN, LOW); // Fan is off
+  // Disable motors
+  raMotor.setEnable(false);
+  decMotor.setEnable(false);
+
   // Connect to Wi-Fi
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   while (WiFi.waitForConnectResult() != WL_CONNECTED) {
@@ -38,10 +42,6 @@ void setup() {
   client.setCallback(mqttCallback);
 
   reconnectMQTT("TelescopeClient", "teleskop/komut"); // Subscribe to topics
-
-  // Disable motors
-  raMotor.setEnable(false);
-  decMotor.setEnable(false);
 }
 
 void loop() {
